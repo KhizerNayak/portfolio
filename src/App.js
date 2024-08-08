@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, HashRouter } from 'react-router-dom';
 import NavBar from './components/Nav/Nav';
 import Home from './pages/Homepage';
 import Contact from './pages/Contact';
@@ -9,9 +9,9 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <NavBar />
-      <Home/>
+      {/* <Home/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
       {/* <Footer /> */}
-    </Router>
+    </HashRouter>
   );
 };
 
