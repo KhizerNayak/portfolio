@@ -1,0 +1,281 @@
+/* src/components/Footer.css */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 30px; /* Reduce padding to make it smaller */
+  text-align: center;
+  font-size: 14px; /* Reduce font size for a more compact look */
+}
+
+.footer-content {
+  max-width: 1000px; /* Reduce max-width for a more compact layout */
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0; /* Reduce margin for smaller spacing */
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 8px; /* Reduce margin between links */
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+  color: #AA367C; /* Change this color to your desired hover color */
+  text-decoration: underline;
+  transform: scale(1.1); /* Increase size by 10% */
+  cursor: pointer;
+}
+
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0; /* Reduce margin for smaller spacing */
+}
+
+.footer-social li {
+  display: inline;
+  margin: 0 8px; /* Reduce margin between icons */
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 20px; /* Adjust icon size as needed */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  color: #AA367C; /* Change this color to your desired hover color */
+  transform: scale(1.2); /* Increase size by 20% */
+  cursor: pointer;
+}
+
+/* Privacy Policy CSS */
+.PrivacyPolicy {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 70px; /* Adjust this value based on the height of your nav */
+}
+
+.PrivacyPolicy h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+.PrivacyPolicy h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.PrivacyPolicy h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.PrivacyPolicy p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.PrivacyPolicy a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.PrivacyPolicy a:hover {
+  text-decoration: underline;
+}
+
+/* Terms and Condition CSS */
+.TermsAndCondition {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 70px; /* Adjust this value based on the height of your nav */
+}
+
+.TermsAndCondition h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+.TermsAndCondition h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.TermsAndCondition h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.TermsAndCondition p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.TermsAndCondition a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.TermsAndCondition a:hover {
+  text-decoration: underline;
+}
+
+/* General layout adjustments for visibility and scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+  min-height: 100vh; /* Ensure container takes full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Allow main content to expand */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding-bottom: 80px; /* Space for footer */
+}
+
+footer {
+  position: relative; /* Ensure footer is properly positioned */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Base styles remain unchanged */
+
+/* Smaller screens adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Reduce font size for a more compact look */
+  }
+
+  .footer-content {
+    max-width: 90%; /* Make content width more adaptive */
+    margin: 0 auto;
+  }
+
+  .footer-links {
+    margin: 5px 0; /* Reduce margin for smaller spacing */
+  }
+
+  .footer-links li {
+    margin: 0 6px; /* Reduce margin between links */
+  }
+
+  .footer-social {
+    margin: 5px 0; /* Reduce margin for smaller spacing */
+  }
+
+  .footer-social li {
+    margin: 0 6px; /* Reduce margin between icons */
+  }
+
+  .footer-social a {
+    font-size: 18px; /* Adjust icon size as needed */
+  }
+
+  .PrivacyPolicy, .TermsAndCondition {
+    padding: 15px;
+    margin-top: 50px; /* Adjust top margin based on nav height */
+  }
+
+  .PrivacyPolicy h1, .TermsAndCondition h1 {
+    font-size: 2rem; /* Adjust heading sizes */
+    margin-bottom: 0.8rem;
+  }
+
+  .PrivacyPolicy h2, .TermsAndCondition h2 {
+    font-size: 1.6rem; /* Adjust subheading sizes */
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .PrivacyPolicy h3, .TermsAndCondition h3 {
+    font-size: 1.3rem; /* Adjust sub-subheading sizes */
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .PrivacyPolicy p, .TermsAndCondition p {
+    margin-bottom: 0.8rem; /* Adjust paragraph margin */
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .PrivacyPolicy a, .TermsAndCondition a {
+    font-size: 14px; /* Adjust link font size */
+  }
+}
+
+/* Extra small screens adjustments */
+@media (max-width: 480px) {
+  .footer {
+    padding: 8px 15px; /* Further adjust padding for extra small screens */
+    font-size: 11px; /* Further reduce font size */
+  }
+
+  .footer-links li,
+  .footer-social li {
+    margin: 0 4px; /* Further reduce margin between items */
+  }
+
+  .footer-social a {
+    font-size: 16px; /* Further adjust icon size */
+  }
+
+  .PrivacyPolicy, .TermsAndCondition {
+    padding: 10px;
+    margin-top: 40px; /* Further adjust top margin */
+  }
+
+  .PrivacyPolicy h1, .TermsAndCondition h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .PrivacyPolicy h2, .TermsAndCondition h2 {
+    font-size: 1.4rem; /* Further reduce subheading size */
+  }
+
+  .PrivacyPolicy h3, .TermsAndCondition h3 {
+    font-size: 1.2rem; /* Further reduce sub-subheading size */
+  }
+
+  .PrivacyPolicy p, .TermsAndCondition p {
+    font-size: 13px; /* Further reduce paragraph font size */
+  }
+
+  .PrivacyPolicy a, .TermsAndCondition a {
+    font-size: 13px; /* Further adjust link font size */
+  }
+}

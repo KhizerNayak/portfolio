@@ -1,0 +1,215 @@
+/* Contact.css */
+
+/* Style for the overall container of the Contact page */
+.contact-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  background: url('../asset/color-sharp2.png') no-repeat center center; /* Update with your image URL */
+  background-size: cover; /* Ensures the image covers the entire container */
+}
+
+/* Style for the header section */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the logo */
+.Header .logo img {
+  height: 50px;
+}
+
+/* Style for the heading */
+.contact-page-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Style for the contact form container */
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.9); /* Light white background */
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form heading */
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style for form labels */
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Style for form inputs and textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Style for submit button */
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  /* margin: 1rem; */
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Change to your preferred color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: margin-left 0.3s ease-in-out;
+  line-height: 1;
+}
+
+button svg {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Change to your preferred hover color */
+  margin-left: 15px; /* Increase margin on hover */
+}
+
+
+/* Base styles remain unchanged */
+
+/* Smaller screens adjustments */
+@media (max-width: 768px) {
+  .contact-page-container {
+    padding: 15px;
+    background-size: cover; /* Maintain background image covering container */
+  }
+
+  .Header {
+    flex-direction: column; /* Stack logo and other header items vertically */
+    padding: 10px;
+  }
+
+  .Header .logo img {
+    height: 40px; /* Reduce logo size */
+  }
+
+  .contact-page-container h1 {
+    font-size: 1.75rem; /* Slightly reduce font size for smaller screens */
+    margin: 15px 0;
+  }
+
+  .contact-form-container {
+    padding: 15px;
+    max-width: 100%; /* Make form container take full width */
+  }
+
+  .contact-form-container h2 {
+    font-size: 1.6rem; /* Adjust heading size */
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem; /* Reduce label font size */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 0.9rem; /* Adjust input and textarea font size */
+  }
+
+  .submit-button {
+    padding: 8px 16px;
+    font-size: 0.9rem; /* Adjust button size */
+  }
+
+  .back-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem; /* Adjust back button size */
+  }
+
+  button svg {
+    font-size: 20px;
+    margin-left: 5px; /* Adjust icon size and spacing */
+  }
+}
+
+/* Extra small screens adjustments */
+@media (max-width: 480px) {
+  .Header .logo img {
+    height: 30px; /* Further reduce logo size */
+  }
+
+  .contact-page-container h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+    margin: 10px 0;
+  }
+
+  .contact-form-container {
+    padding: 10px;
+  }
+
+  .contact-form-container h2 {
+    font-size: 1.4rem; /* Further reduce heading size */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 6px;
+    font-size: 0.8rem; /* Further reduce input font size */
+  }
+
+  .submit-button,
+  .back-button {
+    padding: 6px 12px;
+    font-size: 0.8rem; /* Further adjust button size */
+  }
+
+  button svg {
+    font-size: 18px; /* Further reduce icon size */
+  }
+}
+

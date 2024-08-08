@@ -1,0 +1,126 @@
+/* src/cssFold/Banner.css */
+.banner {
+    position: relative;
+    margin-top: 0; /* Ensure no margin at the top */
+    padding: 260px 0 100px 0;
+    background: #000; /* Optional: fallback color */
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /* Removed margin-top to avoid extra space above the banner */
+}
+
+/* .banner video.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video is behind the content */
+/* } */
+
+.banner .tagline {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+   
+}
+.tagline{
+    color:white;
+}
+.banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #fff; /* Set text color to white */
+}
+
+.banner p {
+    color: #B8B8B8;
+    font-size: 16px; /* Adjust font size as needed */
+    letter-spacing: 0.8px;
+    line-height: 1.4em; /* Adjust line height */
+    width: 96%;
+    margin-bottom: 20px; /* Add margin to separate from button */
+    position: relative; /* Ensure proper positioning */
+    z-index: 1; /* Ensure text is above Lottie animation */
+}
+
+.banner button {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px; /* Increased font size */
+    padding: 10px 20px; /* Increase padding for larger button */
+    margin-top: 20px; /* Reduced margin to bring button closer to text */
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Add background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.banner button:hover {
+    background-color: #555; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.banner button svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: margin-left 0.3s ease-in-out;
+    line-height: 1;
+}
+
+.banner button:hover svg {
+    margin-left: 15px; /* Increase margin on hover */
+}
+
+.banner .lottie-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; /* Align Lottie animation to the top */
+    margin-top: -50px; /* Adjust this value to bring the animation up */
+}
+
+.banner .lottie-container .lottie-animation {
+    width: 100%; /* Adjust the width as needed */
+}
+
+@media (max-width: 768px) {
+    .banner .lottie-container {
+        justify-content: center;
+        margin-top: 20px; /* Adjust the margin to your liking */
+    }
+
+    .banner .lottie-container .lottie-animation {
+        width: 80%; /* Adjust the width on smaller screens */
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.txt-rotate > .wrap {
+    border-right: 0.08em solid #666;
+}

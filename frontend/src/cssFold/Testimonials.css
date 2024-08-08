@@ -1,0 +1,142 @@
+.testimonials-section {
+  padding: 60px 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 0 0 auto; /* Prevent cards from shrinking or expanding */
+  width: 300px; /* Set a fixed width for each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+}
+
+.testimonial-card blockquote {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-card .author {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testimonial-card .position {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aaa;
+}
+
+/* Base styles remain unchanged */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 0; /* Reduce padding for smaller screens */
+  }
+  
+  .testimonials-section h2 {
+    font-size: 36px; /* Adjust font size for smaller screens */
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
+  }
+  
+  .testimonials-container {
+    padding: 10px; /* Reduce padding inside the container */
+    gap: 15px; /* Reduce gap between testimonial cards */
+  }
+  
+  .testimonial-card {
+    width: 250px; /* Adjust card width for smaller screens */
+    padding: 15px; /* Adjust padding inside the card */
+    border-radius: 8px; /* Slightly reduce border-radius */
+  }
+  
+  .testimonial-image {
+    width: 80px; /* Reduce image size */
+    height: 80px; /* Match height to width */
+    margin-bottom: 15px; /* Adjust margin below the image */
+  }
+  
+  .testimonial-card blockquote {
+    font-size: 16px; /* Adjust font size for readability */
+    margin-bottom: 15px; /* Reduce margin for smaller screens */
+  }
+  
+  .testimonial-card .author {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+  
+  .testimonial-card .position {
+    font-size: 14px; /* Adjust font size for readability */
+  }
+}
+
+/* Further adjustments for extra small screens */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 30px 0; /* Further reduce padding for extra small screens */
+  }
+  
+  .testimonials-section h2 {
+    font-size: 28px; /* Further reduce font size */
+    margin-bottom: 15px; /* Further reduce margin */
+  }
+  
+  .testimonials-container {
+    padding: 5px; /* Further reduce padding inside the container */
+    gap: 10px; /* Further reduce gap between cards */
+  }
+  
+  .testimonial-card {
+    width: 220px; /* Further reduce card width */
+    padding: 10px; /* Further adjust padding inside the card */
+    border-radius: 6px; /* Further reduce border-radius */
+  }
+  
+  .testimonial-image {
+    width: 60px; /* Further reduce image size */
+    height: 60px; /* Match height to width */
+    margin-bottom: 10px; /* Further adjust margin below the image */
+  }
+  
+  .testimonial-card blockquote {
+    font-size: 14px; /* Further adjust font size */
+    margin-bottom: 10px; /* Further reduce margin */
+  }
+  
+  .testimonial-card .author {
+    font-size: 16px; /* Further reduce font size */
+  }
+  
+  .testimonial-card .position {
+    font-size: 12px; /* Further reduce font size */
+  }
+}

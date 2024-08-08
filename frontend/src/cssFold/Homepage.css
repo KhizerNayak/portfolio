@@ -1,0 +1,83 @@
+/* General styles for the navbar and main content */
+.Header {
+  background-color: #BFC6F5;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+  height: 60px; /* Consider defining this value as a variable */
+  z-index: 11000;
+  mix-blend-mode:color-burn;
+  
+}
+
+.logo {
+  height: 50px;
+  z-index: 100000;
+}
+
+
+/* Remove default margin-top for main content */
+main {
+  padding-top: 60px; /* Adjusted to match the header height */
+  background-color: #000;
+}
+
+main.menu-open {
+  margin-top: calc(60px + var(--menu-height, 0px)); /* Consider defining --menu-height */
+}
+
+/* Section 1 CSS */
+.Intro {
+  display: flex;
+  width: 100%;
+  padding-top: 0;
+  background-color: #000;
+}
+
+/* Adjust margin-top or padding-top for the banner section */
+section.banner {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Footer */
+/* footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1001; /* Added z-index to ensure footer is on top of other elements */
+/*} */
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media queries */
+@media (min-width: 769px) {
+  section.banner{ 
+    padding-top: 0 px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.banner {
+    padding-top: 20px;
+  }
+  
+
+}
