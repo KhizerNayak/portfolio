@@ -1,0 +1,21 @@
+[
+    {
+      "quote": "This is the best service I've ever used!",
+      "author": "John Doe",
+      "position": "CEO, Company",
+      "image": "/asset/pencils-762555_1280.jpg"
+    },
+    {
+      "quote": "Amazing experience and outstanding support!",
+      "author": "Jane Smith",
+      "position": "CTO, Company",
+      "image": "path/to/image2.jpg"
+    },
+    {
+      "quote": "Highly recommend to everyone!",
+      "author": "Alice Johnson",
+      "position": "Designer, Company",
+      "image": "path/to/image3.jpg"
+    }
+  ]
+  
