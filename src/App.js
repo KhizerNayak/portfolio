@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Nav/Nav';
 import Home from './pages/Homepage';
 import Contact from './pages/Contact';
@@ -16,7 +16,6 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        {/* Add other routes as needed */}
       </Routes>
       {/* <Footer /> */}
     </Router>
