@@ -3,7 +3,7 @@ import NavBar from '../components/Nav/Nav';
 import '../cssFold/Homepage.css';
 import logo from '../asset/P.png';
 import { Banner } from '../components/Banner';
-import { Skills } from '../pages/Skill';
+import { Skills } from './Skill';
 import { ProjectsSection } from './projects';
 import { TestimonialsSection } from './Testimonials';
 import { BlogsSection } from './blogs';
