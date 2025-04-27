@@ -1,10 +1,8 @@
 
 
-
-
 .Main-nav {
   background-color: #BFC6F5;
-  padding: 0 1rem; /* Padding to match header */
+  padding: 0 1rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -36,16 +34,29 @@
   font-size: 18px;
   display: block;
   transition: background 0.3s;
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* Add active class styles */
+.Main-nav ul li a.active {
+  background: #333;
+  color: #fff;
 }
 
 .Main-nav ul li a:hover {
   color: #fff;
-  background: #333; /* Changed to a more accessible color */
+  background: #333;
+  cursor: pointer; /* Ensure pointer cursor on hover */
 }
 
 .Main-nav ul li:nth-child(6) a:hover {
   color: #fff;
-  background: red; /* Changed to a more accessible color */
+  background: red;
+  cursor: pointer; /* Ensure pointer cursor on hover for Resume */
+}
+
+.nav-link {
+  cursor: pointer !important; /* Force pointer cursor */
 }
 .menu-toggle {
   display: none;

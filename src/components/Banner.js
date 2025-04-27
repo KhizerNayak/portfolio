@@ -13,7 +13,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Full Stack Developer", "Web Designer", "Data Analyst"];
+  const toRotate = ["Full Stack Developer", "Web Designer", "Data Analyst", "Data Engineer"];
   const period = 2000;
 
   const navigate = useNavigate();
@@ -60,21 +60,22 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Khizer Nayak.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Web Designer", "Data Analyst" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi! I'm Khizer Nayak.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Web Designer", "Data Analyst", "Data Engineer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>
-                  I started my journey as a full-stack .NET developer, crafting web applications and software solutions.
+                    I started my journey as a full-stack .NET developer, crafting web applications and software solutions.
 
-My passion for data led me to transition into data analytics, where I uncovered insights and built stories from numbers.
+                    My passion for data led me to transition into data analytics, where I uncovered insights and built stories from numbers.
 
-Eager to deepen my skills, I ventured into data science, blending statistical models with real-world impact.
+                    Eager to deepen my skills, I ventured into data science, blending statistical models with real-world impact.
 
-Today, I stand as a data engineer — designing scalable pipelines, building data systems, and enabling data-driven decisions.
+                    Today, I stand as a data engineer — designing scalable pipelines, building data systems, and enabling data-driven decisions.
 
-With a strong foundation in Python, SQL, and cloud-native tools, I bridge the gap between raw data and actionable intelligence.
+                    With a strong foundation in Python, SQL, and cloud-native tools, I bridge the gap between raw data and actionable intelligence.
 
-Beyond the code, I'm an eSports enthusiast, driven by a competitive spirit and a love for continuous learning.
+                    Beyond the code, I'm an eSports enthusiast, driven by a competitive spirit and a love for continuous learning.
 
-Welcome to my portfolio — a reflection of my journey, my skills, and my vision for building the future through data.                  </p>
+                    Welcome to my portfolio — a reflection of my journey, my skills, and my vision for building the future through data.   
+                  </p>
 
                   <button onClick={handleNavigate}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}

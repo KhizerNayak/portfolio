@@ -10,17 +10,18 @@ import TermsAndConditions from './pages/TermsAndCondition';
 const App = () => {
   return (
     <HashRouter>
-      <NavBar />
-      {/* <Home/> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-      </Routes>
-      {/* <Footer /> */}
+      <div className="app-container">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        </Routes>
+      </div>
     </HashRouter>
   );
 };
 
 export default App;
+
