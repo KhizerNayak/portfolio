@@ -62,8 +62,19 @@ export const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Khizer Nayak.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Web Designer", "Data Analyst" ]'><span className="wrap">{text}</span></span></h1>
                   <p>
-                       A versatile Full Stack .NET Developer, Data Analyst, and Web Designer with a passion for crafting innovative solutions. With a solid foundation in .NET technologies, I build dynamic and scalable applications that seamlessly integrate backend and frontend systems. My expertise extends to web design, where I focus on creating intuitive and visually appealing user experiences. As a Data Analyst, I excel in analyzing complex datasets to extract actionable insights and drive strategic decisions. Combining these skills, I am committed to delivering comprehensive solutions that are both technically robust and aesthetically engaging.
-                  </p>
+                  I started my journey as a full-stack .NET developer, crafting web applications and software solutions.
+
+My passion for data led me to transition into data analytics, where I uncovered insights and built stories from numbers.
+
+Eager to deepen my skills, I ventured into data science, blending statistical models with real-world impact.
+
+Today, I stand as a data engineer — designing scalable pipelines, building data systems, and enabling data-driven decisions.
+
+With a strong foundation in Python, SQL, and cloud-native tools, I bridge the gap between raw data and actionable intelligence.
+
+Beyond the code, I'm an eSports enthusiast, driven by a competitive spirit and a love for continuous learning.
+
+Welcome to my portfolio — a reflection of my journey, my skills, and my vision for building the future through data.                  </p>
 
                   <button onClick={handleNavigate}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
