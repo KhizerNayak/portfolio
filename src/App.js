@@ -5,7 +5,7 @@ import Home from './pages/Homepage';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/privacyAndPolicy';
 import TermsAndConditions from './pages/TermsAndCondition';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 const App = () => {
   return (
