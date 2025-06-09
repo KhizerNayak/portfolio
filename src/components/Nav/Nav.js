@@ -14,7 +14,7 @@ const NavBar = ({ onToggleMenu }) => {
   const list = [
     { name: "Intro", id: "intro" },
     { name: "Skills", id: "skill" },
-    { name: "Portfolio", id: "projects" },
+    { name: "Projects", id: "projects" },
     { name: "Testimonials", id: "testimonials" },
     { name: "Blogs", id: "blogs" },
     { name: "Resume", id: "resume" }
