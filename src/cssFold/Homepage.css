@@ -1,28 +1,72 @@
 /* General styles for the navbar and main content */
-.Header {
-  background-color: #BFC6F5;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
   margin: 0;
-  position: fixed;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.Homepage {
   width: 100%;
+  overflow-x: hidden;
+}
+
+.Header {
+  position: fixed;
   top: 0;
   left: 0;
-  
-  height: 60px; /* Consider defining this value as a variable */
-  z-index: 11000;
-  mix-blend-mode:color-burn;
-  
+  right: 0;
+  z-index: 1000;
+  height: 75px;
+  background-color: #BFC6F5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
+main {
+  padding-top: 75px;
+  position: relative;
+}
+
+.section {
+  min-height: 100vh;
+  padding-top: 75px;
+  scroll-margin-top: 75px;
+}
+
+/* Add these styles for smooth section transitions */
+section {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+section.active {
+  opacity: 1;
+}
+
+.logo img {
   height: 50px;
-  z-index: 100000;
+  margin: 10px;
 }
 
+/* For smooth scrolling on iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+  .section {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Ensure sections are visible and properly spaced */
+#intro, #skills, #projects, #testimonials, #blogs {
+  display: block;
+  width: 100%;
+  position: relative;
+}
 
 /* Remove default margin-top for main content */
 main {

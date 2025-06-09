@@ -2,7 +2,7 @@
 
 .blogs-section {
   padding: 60px 0;
-  background-color: #f5f5f5;
+  /* background-color: #db8484; */
   color: #333;
   text-align: center;
   margin-bottom: 60px; /* Creates space between blogs section and footer */
@@ -27,7 +27,7 @@
 }
 
 .blog-card {
-  background: #fff;
+  background: #da8383;
   padding: 20px;
   border-radius: 10px;
   text-align: center;

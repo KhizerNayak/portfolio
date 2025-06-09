@@ -45,7 +45,7 @@ const Homepage = () => {
           <BlogsSection />
         </section>
       </main>
-       <Footer />
+      <Footer />
     </div>
   );
 };

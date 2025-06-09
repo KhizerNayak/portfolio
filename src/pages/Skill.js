@@ -36,12 +36,22 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                  As a Full Stack .NET Developer, I specialize in building scalable and efficient backend systems with .NET technologies, ensuring robust functionality and seamless integration with front-end solutions. My experience in web design allows me to create visually appealing and user-friendly interfaces, enhancing the overall user experience. Additionally, my skills as a Data Analyst enable me to interpret complex datasets, generate actionable insights, and drive data-informed decision-making. By combining these expertise areas, I deliver comprehensive solutions that are both technically sound and aesthetically pleasing, tailored to meet the specific needs and goals of each project.
+              As a Data Engineer with a strong foundation in full-stack development, I specialize in designing and building scalable, resilient data pipelines that transform raw information into actionable insights.
+
+With proficiency in Python, SQL, and cloud-native tools, I architect end-to-end data solutions — from extraction to modeling to deployment — ensuring seamless data flow across systems.
+
+My background in analytics and data science enables me to not just move data, but to understand it, optimize it, and engineer it for maximum business impact.
+
+Combining technical expertise with a mindset shaped by eSports — precision, strategy, and continuous improvement — I deliver intelligent, high-performance solutions tailored to real-world challenges.
               </p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
                   <img src={meter1} alt="Full stack Development" />
                   <h5>Full Stack Development</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="Data Engineer" />
+                  <h5>Data Engineer</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="Data Analyst" />

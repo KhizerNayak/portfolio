@@ -38,6 +38,9 @@ export const ProjectsSection = () => {
 
       <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
         <Nav variant="pills" className="nav-pills">
+        <Nav.Item>
+            <Nav.Link eventKey="fifth">Data Engineer</Nav.Link>
+          </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="first">UI/UX & Web Design</Nav.Link>
           </Nav.Item>

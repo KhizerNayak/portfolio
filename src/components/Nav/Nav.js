@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../../cssFold/Nav.css';
-import Resume1 from '../../asset/resumefolder/Resume1.pdf';
+import Resume1 from '../../asset/resumefolder/ETLResume.pdf';
 
 const NavBar = ({ onToggleMenu }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const list = ["Intro", "Skill", "Testimonials", "Projects", "Blogs", "Resume"];
+  // Updated list to match exact section IDs from Homepage.js
+  const list = [
+    { name: "Intro", id: "intro" },
+    { name: "Skills", id: "skill" },
+    { name: "Projects", id: "projects" },
+    { name: "Testimonials", id: "testimonials" },
+    { name: "Blogs", id: "blogs" },
+    { name: "Resume", id: "resume" }
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,51 +31,76 @@ const NavBar = ({ onToggleMenu }) => {
   };
 
   useEffect(() => {
-    if (onToggleMenu) {
-      const menuHeight = menuRef.current ? menuRef.current.scrollHeight : 0;
-      onToggleMenu(isMenuOpen, menuHeight);
-    }
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMenuOpen, onToggleMenu]);
+  }, [isMenuOpen]);
 
   const handleClick = (item) => {
-    if (item === "Resume") {
-      const resumePath = Resume1;
-      window.open(resumePath, '_blank');
+    if (item.name === "Resume") {
+      window.open(Resume1, '_blank');
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection(item.id);
+      }, 100);
     } else {
-      toggleMenu();
+      scrollToSection(item.id);
+    }
+    
+    setIsMenuOpen(false);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start'
+      });
     }
   };
 
   return (
-    <div className={`Main-nav ${isMenuOpen ? 'active' : ''}`}>
+    <nav className={`Main-nav ${isMenuOpen ? 'active' : ''}`}>
       <button className='menu-toggle' onClick={toggleMenu}>
         ☰
       </button>
       <ul ref={menuRef} className={isMenuOpen ? 'active' : ''}>
         {list.map((item, index) => (
           <li key={index}>
-            {item === "Resume" ? (
-              <a href="#" onClick={() => handleClick(item)}>
-                {item}
+            {item.name === "Resume" ? (
+              <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(item);
+                }}
+                className="nav-link"
+              >
+                {item.name}
               </a>
             ) : (
               <Link
-                to={item.toLowerCase()}
+                to={item.id}
+                spy={true}
                 smooth={true}
+                offset={-70}
                 duration={500}
+                activeClass="active"
                 onClick={() => handleClick(item)}
-                offset={-60}
+                className="nav-link"
+                style={{ cursor: 'pointer' }}
               >
-                {item}
+                {item.name}
               </Link>
             )}
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 
