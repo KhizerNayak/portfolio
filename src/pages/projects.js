@@ -29,6 +29,10 @@ export const ProjectsSection = () => {
       { title: 'Automation Project 1', description: 'Description 1', image: img4 },
       { title: 'Automation Project 2', description: 'Description 2', image: img4 },
     ],
+    fifth: [
+      { title: 'Data Engineer Project 1', description: 'Description 1', image: img4 },
+      { title: 'Data Engineer Project 2', description: 'Description 2', image: img4 },
+    ],
   };
 
   return (
@@ -38,7 +42,7 @@ export const ProjectsSection = () => {
 
       <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
         <Nav variant="pills" className="nav-pills">
-        <Nav.Item>
+          <Nav.Item>
             <Nav.Link eventKey="fifth">Data Engineer</Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -97,6 +101,19 @@ export const ProjectsSection = () => {
             )}
             {key === 'fourth' && (
               <Tab.Pane eventKey="fourth" className="tab-pane">
+                {projects.fourth.map((project, index) => (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" key={index} className="project-card">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                    <div>
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                    </div>
+                  </a>
+                ))}
+              </Tab.Pane>
+            )}
+            {key === 'fifth' && (
+              <Tab.Pane eventKey="fifth" className="tab-pane">
                 {projects.fourth.map((project, index) => (
                   <a href={project.url} target="_blank" rel="noopener noreferrer" key={index} className="project-card">
                     <img src={project.image} alt={project.title} className="project-image" />
