@@ -1,6 +1,6 @@
 /* General styles for the navbar and main content */
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-padding-top: 75px;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 main {
-  padding-top: 75px;
+  /* padding-top: 75px; */
   position: relative;
 }
 
