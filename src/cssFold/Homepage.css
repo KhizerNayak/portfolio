@@ -67,6 +67,7 @@ section.active {
   width: 100%;
   position: relative;
   scroll-margin-top: 62px;
+  min-height: calc(100vh - 62px);
 }
 
 /* Remove default margin-top for main content */
