@@ -150,7 +150,6 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -161,8 +160,6 @@ body, html {
 }
 
 main {
-  flex: 1; /* Allow main content to expand */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
   padding-bottom: 80px; /* Space for footer */
 }
 
