@@ -18,15 +18,17 @@ export const TestimonialsSection = () => {
       .catch((err) => setError(err));
   }, []);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
   return (
     <div className="testimonials-section">
       <h2>Testimonials</h2>
       <div className="testimonials-container">
-        {testimonials.map((testimonial, index) => (
+        {error && (
+          <p>Could not load testimonials right now.</p>
+        )}
+        {!error && testimonials.length === 0 && (
+          <p>Loading testimonials...</p>
+        )}
+        {!error && testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
             {testimonial.image && (
               <img
