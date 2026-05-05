@@ -24,8 +24,12 @@ const NavBar = () => {
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - 62;
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({ top, behavior: 'smooth' });
+    } else {
+      window.scrollTo(0, top);
     }
   };
 
@@ -36,24 +40,23 @@ const NavBar = () => {
       return;
     }
 
+    setIsMenuOpen(false);
+
     if (location.pathname !== '/') {
       navigate('/', { state: { scrollToId: id } });
     } else {
-      scrollToSection(id);
+      // Defer so the menu close + layout updates settle before measuring/scrolling
+      setTimeout(() => scrollToSection(id), 50);
     }
-    setIsMenuOpen(false);
   };
 
   const handleLogoClick = () => {
+    setIsMenuOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
     } else {
-      const intro = document.getElementById('intro');
-      if (intro) {
-        intro.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      setTimeout(() => scrollToSection('intro'), 50);
     }
-    setIsMenuOpen(false);
   };
 
   return (
