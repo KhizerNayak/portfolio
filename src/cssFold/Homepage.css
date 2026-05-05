@@ -62,10 +62,11 @@ section.active {
 }
 
 /* Ensure sections are visible and properly spaced */
-#intro, #skills, #projects, #testimonials, #blogs {
+#intro, #skill, #projects, #testimonials, #blogs {
   display: block;
   width: 100%;
   position: relative;
+  scroll-margin-top: 62px;
 }
 
 /* Remove default margin-top for main content */

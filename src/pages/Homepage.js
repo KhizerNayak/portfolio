@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
-import NavBar from '../components/Nav/Nav';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../cssFold/Homepage.css';
-import logo from '../asset/P.png';
 import { Banner } from '../components/Banner';
 import { Skills } from './Skill';
 import { ProjectsSection } from './projects';
 import { TestimonialsSection } from './Testimonials';
 import { BlogsSection } from './blogs';
-import Footer from '../components/Footer';
 
 const Homepage = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [menuHeight, setMenuHeight] = useState(0);
+  const location = useLocation();
 
-  const handleToggleMenu = (isOpen, height) => {
-    setIsMenuOpen(isOpen);
-    setMenuHeight(height);
-  };
+  useEffect(() => {
+    const scrollToId = location.state && location.state.scrollToId;
+    if (scrollToId) {
+      // Wait for the DOM/sections to render before scrolling
+      requestAnimationFrame(() => {
+        const el = document.getElementById(scrollToId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  }, [location]);
 
   return (
     <div className='Homepage'>
-      <header className='Header'>
-        <div className="logo">
-          <img src={logo} alt="My Logo" />
-        </div>
-        <NavBar onToggleMenu={handleToggleMenu} />
-      </header>
-      <main className={isMenuOpen ? 'menu-open' : ''} style={{ marginTop: isMenuOpen ? `${menuHeight}px` : '60px', marginLeft: '0', width: '100%' }}>
+      <main style={{ marginTop: '60px', marginLeft: '0', width: '100%' }}>
         <section id='intro' className='Intro'>
           <div className='intro-content'>
             <Banner />
@@ -45,7 +44,6 @@ const Homepage = () => {
           <BlogsSection />
         </section>
       </main>
-      <Footer />
     </div>
   );
 };
